@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    .title {
+        display: flex;
+        justify-content: center;
+        background-color: burlywood;
+    }
+
+    .app {
+        padding: 2rem;
+        margin-top: 1rem;
+        display: flex;
+        gap: 1em;
+overflow-x: scroll;
+    }
+
+
+
+
+    .app .column {
+
+        min-width: 18em;
+        min-height: 5em;
+        border-radius: 5px;
+        background-color: rgb(114, 114, 241);
+        padding: 20px;
+    }
+
+
+    .app .column .col_heading {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .app .column .inp{
+        background-color: rgb(236, 237, 128);
+        border-radius: 4px;
+        padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+
+    }
+</style>
+
+<body>
+
+    <h1 class="title">Trello App</h1>
+
+    <div class="app">
+        <div class="column">
+            <div class="col_heading" >Todo</div>
+            <div class="inp" draggable="true">task 1</div>
+            <div class="inp" draggable="true">task 2</div>
+            <div class="inp" draggable="true">task 3</div>
+
+
+
+        </div>
+
+
+        <div class="column">
+            <div class="col_heading">In Progress</div>
+            <div class="inp" draggable="true">task 4</div>
+          
+            
+
+
+
+        </div>
+    </div>
+    <script>
+
+        document.addEventListener('click' ,function(e){
+            console.log("e.path: ",e.target.className);
+        })
+    </script>
+</body>
+
+</html>
